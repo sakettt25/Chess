@@ -4,7 +4,7 @@ const Header = () => {
         CHESS GAME
         <div>
           <span className="text-gray-300 text-sm md:text-base font-bold ml-3 ">
-            Made with love 🫶 : Saket Saurav
+            Made with love 🫶🏻 : Saket Saurav
           </span>
         </div>
       </h1>
