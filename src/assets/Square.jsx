@@ -1,7 +1,6 @@
 import React from "react";
 
 const Square = ({ isDark, piece, onClick, isHighlighted }) => {
-  // Mapping pieces to image paths in the public folder
   const pieceImages = {
     "black-rook": "/Brook.png",
     "black-knight": "/Bknight.png",

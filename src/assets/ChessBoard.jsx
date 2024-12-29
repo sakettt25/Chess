@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Square from "./Square"; // The square component to render each square of the board
-import { getValidMoves, movePiece, isGameOver, } from "./Logic"; // Corrected the import for named exports
-import Toggle from "./Toggle"; // Import the Toggle component to show whose turn it is
+import Square from "./Square";
+import { getValidMoves, movePiece, isGameOver, } from "./Logic";
+import Toggle from "./Toggle";
 
 
 const ChessBoard = () => {
@@ -56,7 +56,7 @@ const ChessBoard = () => {
       <Toggle turn={turn} />
 
       {/* Chess board grid */}
-      <div className="grid grid-cols-8 w-[50%] mx-auto gap-1 mt-6"> {/* Added margin top for spacing */}
+      <div className="grid grid-cols-8 w-[50%] mx-auto gap-1 mt-6">
         {boardState.map((piece, index) => {
           const isDarkSquare = Math.floor(index / 8) % 2 === index % 2; // Determine if the square is dark or light
           const isHighlighted = highlightedSquares.includes(index); // Check if the square should be highlighted

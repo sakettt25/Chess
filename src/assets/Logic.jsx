@@ -1,5 +1,3 @@
-// Logic.jsx
-
 // Function to move a piece on the board
 export const movePiece = (boardState, fromIndex, toIndex) => {
     const newBoardState = [...boardState];
@@ -11,7 +9,7 @@ export const movePiece = (boardState, fromIndex, toIndex) => {
     return newBoardState;
   };
   
-  // Function to get valid moves for a piece (simplified for the example)
+  // Function to get valid moves for a piece
   export const getValidMoves = (index, piece, boardState) => {
     const moves = [];
     const row = Math.floor(index / 8);
@@ -21,7 +19,7 @@ export const movePiece = (boardState, fromIndex, toIndex) => {
     if (piece && piece.includes("pawn")) {
       const isWhitePawn = piece.startsWith("white");
       const direction = isWhitePawn ? -1 : 1; // White moves up (-1), Black moves down (+1)
-      const startingRow = isWhitePawn ? 5 : 1; // White starts from row 6, Black from row 1
+      const startingRow = isWhitePawn ? 5 : 1; // White starts from row 6, Black from row 1 // confusion....??
       const step1 = isWhitePawn ? -8 : 8; // Step 1: white moves up 8, black moves down 8
       const step2 = isWhitePawn ? -16 : 16; // Step 2: white moves up 16, black moves down 16
   
